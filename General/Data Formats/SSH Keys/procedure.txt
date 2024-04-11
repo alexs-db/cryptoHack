@@ -1,0 +1,18 @@
+Pour convertir la clé publique SSH en format PEM :
+
+
+ssh-keygen -f chemin_vers_votre_clé.pub -e -m pem > public_key.pem
+ssh-keygen : l'utilitaire pour la gestion des clés SSH.
+-f chemin_vers_votre_clé.pub : spécifie le chemin vers votre fichier de clé publique SSH.
+-e -m pem : spécifie le format de sortie en PEM.
+Cette commande convertira votre clé publique SSH en format PEM et la sauvegardera dans un fichier nommé public_key.pem.
+
+
+Pour extraire le module (n) de la clé publique RSA à partir du fichier PEM :
+
+
+openssl rsa -pubin -inform PEM -text -noout < public_key.pem
+openssl rsa : l'utilitaire pour la gestion des clés RSA.
+-pubin : indique que l'entrée est une clé publique.
+-inform PEM : spécifie le format d'entrée en PEM.
+-text -noout : affiche les détails de la clé publique, y compris le module (n).

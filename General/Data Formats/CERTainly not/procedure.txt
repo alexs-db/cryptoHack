@@ -1,0 +1,21 @@
+Pour convertir un certificat du format DER au format PEM :
+
+
+"openssl x509 -inform DER -in certificat.der -outform PEM -out certificat.pem"
+
+openssl : l'utilitaire OpenSSL.
+x509 : une sous-commande pour traiter des certificats X.509.
+- inform DER : spécifie que le certificat d'entrée est au format DER.
+-in certificat.der : spécifie le chemin du fichier du certificat DER.
+-outform PEM : spécifie que le certificat de sortie sera au format PEM.
+-out certificat.pem : spécifie le chemin du fichier de sortie au format PEM.
+
+
+Pour extraire la clé publique RSA et afficher ses détails, y compris le module (n) :
+
+
+"openssl x509 -in certificat.pem -pubkey -noout | openssl rsa -pubin -inform PEM -text -noout"
+
+openssl x509 -in certificat.pem -pubkey -noout : extrait la clé publique du certificat PEM sans afficher les informations de sortie.
+| : le tube (pipe) redirige la sortie de la première commande vers l'entrée de la seconde commande.
+openssl rsa -pubin -inform PEM -text -noout : prend la clé publique en entrée, la considère comme une clé publique RSA au format PEM, affiche ses détails sous forme de texte et ne produit pas de sortie de clé privée.
