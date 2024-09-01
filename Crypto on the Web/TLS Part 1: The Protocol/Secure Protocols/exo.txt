@@ -1,0 +1,1 @@
+For this challenge, you just have to click on the 3 bars near the link of the page and click on "Connection is secure" and then "Valid Certifcate" and the name of the organisation will appear !

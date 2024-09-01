@@ -1,0 +1,1 @@
+To find the answer of this challenge you have to search the ServerHello packet message and search about TLS1.3 on the descirption and find an 64 hex 'Random' message.

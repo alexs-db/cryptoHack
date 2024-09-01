@@ -1,0 +1,14 @@
+Using Wireshark and an RSA Private Key to decrypt TLS 1.2
+You've hacked the tls2.cryptohack.org server and obtained the certificate's RSA private key. Use it to decrypt the TLS connection and find the flag in the HTTP/2 stream.
+
+Step 1 Add the RSA-Key :
+
+We can add the RSA-key in Edit 
+ Preferences 
+ Protocols 
+ TLS 
+
+
+Step2 Get the flag : 
+
+The secret is in packet 27. Use the card Decrypted TLSto get the flag.
